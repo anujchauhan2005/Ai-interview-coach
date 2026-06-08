@@ -299,17 +299,7 @@ pip install gtts SpeechRecognition streamlit-mic-recorder
 
 ---
 
-##  License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
-MIT License means: Use it, modify it, share it — just keep the author's name. 
-
----
-
-<div align="center">
-
-**If this project helped you, please give it a  on GitHub!**
+ 
 
 *Built with  using Python, LangChain, and Google Gemini*
 

@@ -7,7 +7,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
 ![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=google&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
 
 **An end-to-end AI-powered interview preparation tool that reads your resume,
 generates personalized questions, evaluates your answers, and tells you your hire probability.**

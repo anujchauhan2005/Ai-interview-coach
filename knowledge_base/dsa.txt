@@ -1,0 +1,102 @@
+== DATA STRUCTURES & ALGORITHMS ==
+
+--- ARRAYS ---
+- Traversal: O(n), Access: O(1), Insert/Delete: O(n)
+- Two Pointer technique: used for pair sum, reverse, palindrome checks
+- Sliding Window: used for max subarray, longest substring problems
+- Prefix Sum: precompute cumulative sums for range queries O(1)
+- Kadane's Algorithm: max subarray sum in O(n)
+- Common interview questions: Two Sum, Best Time to Buy/Sell Stock, Rotate Array
+
+--- LINKED LIST ---
+- Singly: each node has data + next pointer
+- Doubly: each node has data + next + prev pointer
+- Operations: Insert O(1) at head, Delete O(n) in middle, Search O(n)
+- Floyd's Cycle Detection: slow/fast pointer to detect cycle in O(n) O(1) space
+- Reverse a Linked List: iteratively in O(n)
+- Merge two sorted linked lists: O(n+m)
+- Common questions: Reverse LL, Detect Cycle, Merge Sorted Lists, Find Middle
+
+--- STACKS ---
+- LIFO structure. Push/Pop/Peek: O(1)
+- Use cases: balanced parentheses, undo operations, function call stack
+- Monotonic Stack: used for Next Greater Element, Largest Rectangle in Histogram
+- Implement Stack using Queue and Queue using Stack — common interview question
+
+--- QUEUES ---
+- FIFO structure. Enqueue/Dequeue: O(1)
+- Types: Simple Queue, Circular Queue, Priority Queue, Deque
+- BFS uses Queue for level-order traversal
+- Priority Queue: implemented with Heap, used in Dijkstra, task scheduling
+
+--- TREES ---
+- Binary Tree: each node has at most 2 children
+- BST: left < root < right. Search/Insert/Delete: O(log n) average, O(n) worst
+- Balanced BST (AVL, Red-Black): guaranteed O(log n) operations
+- Tree Traversals: Inorder (L-Root-R), Preorder (Root-L-R), Postorder (L-R-Root)
+- BFS (Level Order): uses Queue
+- DFS: uses Recursion or Stack
+- Height of tree: O(n) using recursion
+- LCA (Lowest Common Ancestor): classic tree interview problem
+- Common questions: Inorder traversal, Height, Diameter, Mirror Tree, Path Sum
+
+--- HEAPS ---
+- Min-Heap: parent <= children. Max-Heap: parent >= children
+- Insert: O(log n). Extract Min/Max: O(log n). Peek: O(1)
+- Used for: Priority Queue, K largest/smallest elements, Heap Sort, Dijkstra
+- Python: heapq module (min-heap by default)
+
+--- GRAPHS ---
+- Representation: Adjacency Matrix O(V^2), Adjacency List O(V+E)
+- BFS: shortest path in unweighted graph, level order. Time: O(V+E)
+- DFS: cycle detection, topological sort, connected components. Time: O(V+E)
+- Dijkstra's Algorithm: shortest path in weighted graph (non-negative). O((V+E) log V)
+- Floyd-Warshall: all-pairs shortest path. O(V^3)
+- Kruskal's & Prim's: Minimum Spanning Tree
+- Topological Sort: for DAGs using DFS or Kahn's algorithm (BFS)
+- Union-Find (Disjoint Set): cycle detection, connected components
+- Common questions: Number of Islands, Clone Graph, Course Schedule, Word Ladder
+
+--- DYNAMIC PROGRAMMING ---
+- Memoization (Top-Down): store results of subproblems in a dictionary/array
+- Tabulation (Bottom-Up): fill DP table iteratively
+- Key patterns:
+  - 0/1 Knapsack: dp[i][w] = max value with i items and weight w
+  - Longest Common Subsequence (LCS): dp[i][j]
+  - Longest Increasing Subsequence (LIS): O(n^2) or O(n log n)
+  - Coin Change: minimum coins to make amount
+  - Matrix Chain Multiplication
+  - DP on Strings: Edit Distance, Palindrome Partitioning
+- Common questions: Fibonacci, Climbing Stairs, House Robber, Longest Palindrome
+
+--- SORTING ALGORITHMS ---
+- Bubble Sort: O(n^2) time, O(1) space — stable
+- Selection Sort: O(n^2) time, O(1) space — not stable
+- Insertion Sort: O(n^2) worst, O(n) best — stable, good for small/nearly sorted
+- Merge Sort: O(n log n) time, O(n) space — stable, divide and conquer
+- Quick Sort: O(n log n) average, O(n^2) worst, O(log n) space — not stable
+- Heap Sort: O(n log n) time, O(1) space — not stable
+- Counting Sort: O(n+k) — only for integers in known range
+- Radix Sort: O(nk) — for integers or strings
+
+--- SEARCHING ---
+- Linear Search: O(n)
+- Binary Search: O(log n) — requires sorted array
+- Binary Search on Answer: for problems like "minimum max distance", "koko eating bananas"
+- Ternary Search: for unimodal functions
+
+--- HASHING ---
+- HashMap/HashSet: O(1) average for insert, delete, search
+- Collision handling: Chaining (LinkedList), Open Addressing (Linear Probing)
+- Use cases: frequency count, anagram detection, Two Sum, group anagrams
+- Python: dict and set are hash-based
+
+--- RECURSION & BACKTRACKING ---
+- Recursion: base case + recursive case. Stack depth = O(n) space
+- Backtracking: explore all possibilities, prune invalid ones
+- Classic problems: N-Queens, Sudoku Solver, Permutations, Subsets, Rat in a Maze
+- Time complexity of backtracking: typically O(b^d) where b=branching factor, d=depth
+
+--- COMPLEXITY CHEAT SHEET ---
+O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(2^n) < O(n!)
+Space complexity: always consider auxiliary space used by algorithm

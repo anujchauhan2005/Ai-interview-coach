@@ -1,0 +1,106 @@
+== COMPUTER NETWORKS ==
+
+--- OSI MODEL (7 Layers) ---
+Layer 7 - Application:  HTTP, HTTPS, FTP, SMTP, DNS, SSH — user-facing protocols
+Layer 6 - Presentation: Data format, encryption, compression (SSL/TLS)
+Layer 5 - Session:      Session management, authentication, authorization
+Layer 4 - Transport:    TCP, UDP — end-to-end communication, segmentation
+Layer 3 - Network:      IP, ICMP, routing — logical addressing
+Layer 2 - Data Link:    MAC address, framing, error detection (Ethernet, Wi-Fi)
+Layer 1 - Physical:     Bits, cables, signals, hardware (hubs, repeaters)
+
+Mnemonic: "All People Seem To Need Data Processing"
+
+--- TCP/IP MODEL (4 Layers) ---
+Application → Transport → Internet → Network Access
+Maps to OSI: Application+Presentation+Session → Transport → Network → DataLink+Physical
+
+--- TCP vs UDP ---
+TCP (Transmission Control Protocol):
+- Connection-oriented (3-way handshake: SYN → SYN-ACK → ACK)
+- Reliable: guaranteed delivery, ordering, error checking, retransmission
+- Slower due to overhead
+- Use cases: HTTP, HTTPS, FTP, SMTP, SSH
+- Flow control: sliding window. Congestion control: slow start, AIMD
+
+UDP (User Datagram Protocol):
+- Connectionless, no handshake
+- Unreliable: no guarantee of delivery or order, no retransmission
+- Faster, lower overhead
+- Use cases: DNS, video streaming, online gaming, VoIP, DHCP
+
+--- IP ADDRESSING ---
+- IPv4: 32-bit address (4 bytes), e.g., 192.168.1.1
+- IPv6: 128-bit address, e.g., 2001:0db8::1
+- Subnet Mask: separates network and host portions
+- CIDR Notation: 192.168.1.0/24 means 24-bit network, 8-bit host
+- Private IP ranges: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+- NAT (Network Address Translation): maps private IPs to public IP
+- Loopback: 127.0.0.1
+
+--- DNS (Domain Name System) ---
+- Translates domain names to IP addresses
+- Hierarchical: Root → TLD (.com, .org) → Authoritative DNS
+- DNS Resolution: Recursive (resolver does all work) vs Iterative
+- DNS Record Types: A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), NS (nameserver), TXT
+
+--- HTTP/HTTPS ---
+- HTTP: HyperText Transfer Protocol, stateless, port 80
+- HTTPS: HTTP + SSL/TLS encryption, port 443
+- HTTP Methods: GET (read), POST (create), PUT (replace), PATCH (update), DELETE
+- HTTP Status Codes:
+  - 1xx: Informational
+  - 2xx: Success (200 OK, 201 Created, 204 No Content)
+  - 3xx: Redirection (301 Moved Permanently, 302 Found)
+  - 4xx: Client Error (400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found)
+  - 5xx: Server Error (500 Internal Server Error, 503 Service Unavailable)
+- HTTP/1.1: persistent connections, pipelining
+- HTTP/2: multiplexing, binary framing, header compression
+- HTTP/3: based on QUIC (UDP-based)
+- Cookies: store state on client. Session: store state on server
+
+--- REST API ---
+- Representational State Transfer — architectural style
+- Stateless: each request contains all info needed
+- Uniform Interface: standard HTTP methods
+- Resource-based URLs: /users/123 not /getUser?id=123
+- JSON usually used for request/response body
+- REST vs SOAP vs GraphQL
+
+--- SSL/TLS ---
+- TLS (Transport Layer Security): encrypts data in transit
+- TLS Handshake: server sends certificate, client verifies, session key exchanged
+- Symmetric encryption: same key for encrypt/decrypt (faster)
+- Asymmetric encryption: public/private key pair (used in handshake)
+- Certificate Authority (CA): trusted third party that signs certificates
+
+--- ROUTING & SWITCHING ---
+- Router: Layer 3 device, routes packets between networks using IP
+- Switch: Layer 2 device, forwards frames within network using MAC
+- Hub: Layer 1, broadcasts to all ports
+- ARP (Address Resolution Protocol): maps IP to MAC address
+- DHCP: automatically assigns IP addresses to devices
+- Routing Protocols: OSPF (link-state), BGP (path-vector, used on internet), RIP (distance-vector)
+
+--- NETWORK TOPOLOGIES ---
+Bus, Star, Ring, Mesh, Tree, Hybrid
+- Star: most common LAN topology, central switch/hub
+
+--- FIREWALLS & SECURITY ---
+- Firewall: filters incoming/outgoing traffic based on rules
+- Types: Packet filtering, Stateful inspection, Application layer (proxy)
+- VPN: encrypted tunnel over public network
+- Man-in-the-Middle Attack, DDoS, SQL Injection, XSS, CSRF — common attacks
+- Port: logical endpoint. Well-known ports: HTTP(80), HTTPS(443), SSH(22), FTP(21), DNS(53)
+
+--- SOCKET PROGRAMMING ---
+- Socket: endpoint for network communication
+- TCP Socket: connect(), send(), recv(), close()
+- UDP Socket: sendto(), recvfrom()
+- Port + IP = Socket Address
+
+--- LOAD BALANCING ---
+- Distributes traffic across multiple servers
+- Algorithms: Round Robin, Least Connections, IP Hash, Weighted
+- L4 Load Balancer: TCP/UDP level. L7 Load Balancer: HTTP level (smarter)
+- CDN (Content Delivery Network): caches content at edge locations near users

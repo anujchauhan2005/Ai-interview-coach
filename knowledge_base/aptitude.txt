@@ -1,0 +1,147 @@
+== APTITUDE & HR QUESTIONS ==
+
+--- BEHAVIORAL QUESTIONS (STAR Method) ---
+STAR = Situation → Task → Action → Result
+
+"Tell me about yourself":
+Structure: Current role/background → key skills/experience → why this role
+Keep it 90 seconds. Focus on professional journey, not personal life.
+
+"Why do you want to work here?":
+- Research the company's product, culture, tech stack, recent news
+- Connect their mission to your career goals
+- Mention specific things: "I love that you use Python/ML for X"
+
+"Strengths":
+- Pick strengths relevant to the JD
+- Give a real example: "I'm strong in data analysis — at my internship I reduced reporting time by 30%"
+
+"Weaknesses":
+- Pick a real weakness that is NOT critical to the role
+- Show you're actively working on it
+- Example: "I used to struggle with presenting to stakeholders, so I started doing weekly team demos"
+
+"Where do you see yourself in 5 years?":
+- Show ambition but also commitment to the role
+- "I want to grow into a senior data analyst / ML engineer role, and I see this position as the perfect foundation"
+
+"Tell me about a challenge you faced":
+- Use STAR, make it professional
+- Focus on your specific actions, not the team's
+- End with what you learned
+
+"Tell me about a time you failed":
+- Show self-awareness and learning
+- Don't blame others
+- "I missed a deadline on X because I underestimated the complexity. I learned to break tasks into smaller milestones"
+
+"Why should we hire you?":
+- 3 reasons: skills match, experience match, cultural fit
+- Be specific with numbers and examples
+
+"Do you prefer working alone or in a team?":
+- "I can do both. I prefer collaborative environments but am productive independently too"
+
+--- HR QUESTIONS ---
+
+"What is your expected salary?":
+- Research market rate on Glassdoor/AmbitionBox first
+- Give a range: "Based on my research and my skills, I'm looking for X-Y LPA, but I'm open to discussion"
+
+"Are you comfortable with relocation?":
+- Be honest. If yes, say so clearly.
+
+"How do you handle pressure?":
+- Give a specific example
+- Mention tools: prioritization, breaking into smaller tasks, communicating early
+
+"What motivates you?":
+- Problem-solving, learning new things, seeing impact of your work
+- Connect to the role
+
+"Tell me about a time you worked in a team":
+- Use STAR, describe your specific role and contribution
+- Mention conflict resolution if any
+
+--- APTITUDE TOPICS ---
+
+Time & Work:
+- If A can do work in x days, rate = 1/x per day
+- Combined rate = 1/x + 1/y, then time = xy/(x+y)
+
+Speed, Distance, Time:
+- Distance = Speed × Time
+- Average speed = 2xy/(x+y) for same distance at two speeds
+- Relative speed: same direction = difference, opposite = sum
+
+Percentages:
+- % change = (New-Old)/Old × 100
+- Successive % change: a% then b% = a + b + ab/100
+
+Profit & Loss:
+- Profit % = (Profit/CP) × 100
+- SP = CP × (1 + profit%/100)
+- Marked Price, Discount = MP - SP
+
+Ratios & Proportions:
+- a:b = c:d → a×d = b×c (cross multiply)
+- Compound ratio: multiply ratios
+
+Mixtures & Alligation:
+- Rule of Alligation: cheap:expensive = (expensive-mean):(mean-cheap)
+
+Permutations & Combinations:
+- nPr = n!/(n-r)! (order matters)
+- nCr = n!/(r!(n-r)!) (order doesn't matter)
+- Circular permutation: (n-1)!
+
+Probability:
+- P(A) = favorable outcomes / total outcomes
+- P(A and B) = P(A) × P(B) for independent events
+- P(A or B) = P(A) + P(B) - P(A and B)
+
+Number Systems:
+- Binary to Decimal: multiply by powers of 2
+- Decimal to Binary: successive division by 2
+- HCF & LCM: HCF × LCM = product of two numbers
+- Divisibility rules: 2(even), 3(digit sum div by 3), 5(ends 0/5), 9(digit sum div by 9)
+
+Series & Sequences:
+- Arithmetic: a, a+d, a+2d... Sum = n/2 × (2a + (n-1)d)
+- Geometric: a, ar, ar²... Sum = a(r^n - 1)/(r-1)
+
+--- COMPANY-SPECIFIC PATTERNS ---
+
+Product Startups (Flipkart, Swiggy, Zomato, Razorpay):
+- Heavy DSA focus (LeetCode Medium/Hard)
+- System design for senior roles
+- Strong behavioral emphasis on ownership and impact
+
+IT Services (TCS, Infosys, Wipro):
+- Aptitude (quantitative, verbal, logical reasoning)
+- OOP concepts
+- DBMS and SQL
+- Basic data structures
+- Communication skills
+
+FAANG/Big Tech (Google, Microsoft, Amazon):
+- Hard DSA problems
+- System design (Distributed systems, databases, caching)
+- Behavioral (Leadership Principles for Amazon)
+- Code quality and testing
+
+Analytics/BI roles:
+- SQL (complex queries, window functions, optimization)
+- Excel / Power BI / Tableau
+- Statistics (mean, median, standard deviation, regression)
+- Python (Pandas, NumPy)
+- Problem-solving with data
+
+--- CODING INTERVIEW TIPS ---
+1. Clarify the problem before coding (edge cases, constraints, expected output)
+2. Think out loud — explain your approach
+3. Start with brute force, then optimize
+4. Discuss time and space complexity
+5. Write clean code with meaningful variable names
+6. Test with examples including edge cases (empty, single element, negative numbers)
+7. Practice on LeetCode: Easy (warm up) → Medium (target) → Hard (stretch)

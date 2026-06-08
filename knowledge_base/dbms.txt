@@ -1,0 +1,96 @@
+== DATABASE MANAGEMENT SYSTEMS (DBMS) ==
+
+--- BASICS ---
+- DBMS: software to store, retrieve, manage data (MySQL, PostgreSQL, Oracle, SQLite)
+- RDBMS: stores data in tables with rows and columns
+- Schema: logical structure of the database
+- Instance: data stored in the database at a particular moment
+
+--- KEYS ---
+- Primary Key: uniquely identifies each row, cannot be NULL
+- Foreign Key: references primary key of another table, enforces referential integrity
+- Candidate Key: minimal set of attributes to uniquely identify a tuple
+- Super Key: superset of candidate key
+- Composite Key: primary key made of multiple columns
+- Surrogate Key: system-generated key (e.g., auto-increment ID)
+
+--- NORMALIZATION ---
+- Goal: reduce redundancy and improve data integrity
+- 1NF: atomic values, no repeating groups
+- 2NF: 1NF + no partial dependency (all non-key attributes depend on whole primary key)
+- 3NF: 2NF + no transitive dependency (non-key attribute should not depend on another non-key)
+- BCNF: 3NF + for every functional dependency X→Y, X must be a super key
+- Denormalization: intentionally add redundancy for performance (used in data warehouses)
+
+--- ACID PROPERTIES ---
+- Atomicity: transaction is all-or-nothing
+- Consistency: transaction takes DB from one valid state to another
+- Isolation: concurrent transactions don't interfere with each other
+- Durability: committed transactions persist even after system failure
+- Implemented using: Locks, Write-Ahead Logging (WAL), MVCC
+
+--- SQL COMMANDS ---
+DDL (Data Definition Language): CREATE, ALTER, DROP, TRUNCATE
+DML (Data Manipulation Language): SELECT, INSERT, UPDATE, DELETE
+DCL (Data Control Language): GRANT, REVOKE
+TCL (Transaction Control Language): COMMIT, ROLLBACK, SAVEPOINT
+
+--- JOINS ---
+- INNER JOIN: returns rows where condition matches in both tables
+- LEFT JOIN: all rows from left + matching from right (NULL if no match)
+- RIGHT JOIN: all rows from right + matching from left
+- FULL OUTER JOIN: all rows from both tables
+- SELF JOIN: join a table with itself
+- CROSS JOIN: cartesian product of both tables
+- Common interview: difference between INNER and LEFT JOIN
+
+--- SQL QUERIES ---
+SELECT, WHERE, GROUP BY, HAVING, ORDER BY, LIMIT
+- WHERE vs HAVING: WHERE filters before grouping, HAVING filters after
+- Subqueries: nested SELECT inside another query
+- Correlated subquery: inner query references outer query
+- Window Functions: ROW_NUMBER(), RANK(), DENSE_RANK(), LAG(), LEAD(), SUM() OVER()
+- CTEs (Common Table Expressions): WITH clause for readable queries
+
+--- INDEXING ---
+- Index: data structure to speed up query performance
+- Types: B-Tree Index (default, range queries), Hash Index (exact match), Full-Text Index
+- Clustered Index: data rows sorted by index key (one per table, usually primary key)
+- Non-Clustered Index: separate structure pointing to data rows (multiple allowed)
+- Composite Index: index on multiple columns
+- When NOT to index: small tables, columns with high NULL ratio, frequently updated columns
+- Index makes SELECT faster but INSERT/UPDATE/DELETE slower
+
+--- TRANSACTIONS ---
+- Transaction: sequence of operations treated as a single unit
+- Isolation levels: READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE
+- Concurrency problems: Dirty Read, Non-Repeatable Read, Phantom Read
+- Locking: Shared Lock (read), Exclusive Lock (write)
+- Deadlock: two transactions waiting for each other's locks
+- Deadlock prevention: timeout, deadlock detection, lock ordering
+
+--- STORED PROCEDURES & TRIGGERS ---
+- Stored Procedure: precompiled SQL code stored in DB, called by name
+- Function: returns a value, used in SELECT
+- Trigger: automatically executes on INSERT/UPDATE/DELETE events
+- View: virtual table based on SELECT query, does not store data
+
+--- ER DIAGRAM ---
+- Entity: real-world object (table)
+- Attribute: property of entity (column)
+- Relationship: association between entities
+- Cardinality: 1:1, 1:N, M:N
+- Weak Entity: depends on strong entity for identification
+
+--- NoSQL vs SQL ---
+- SQL: structured, ACID, vertical scaling, fixed schema
+- NoSQL: flexible schema, horizontal scaling, eventual consistency
+- Types of NoSQL: Document (MongoDB), Key-Value (Redis), Column (Cassandra), Graph (Neo4j)
+- CAP Theorem: Consistency, Availability, Partition Tolerance — can only guarantee 2 of 3
+
+--- DATA WAREHOUSING ---
+- OLTP: Online Transaction Processing — day-to-day operations, normalized
+- OLAP: Online Analytical Processing — reporting, analytics, denormalized
+- Star Schema: fact table at center, dimension tables around
+- Snowflake Schema: normalized dimension tables
+- ETL: Extract, Transform, Load

@@ -1,0 +1,10 @@
+streamlit
+python-dotenv
+pypdf
+langchain
+langchain-google-genai
+google-generativeai
+gtts
+SpeechRecognition
+streamlit-mic-recorder
+fpdf2
